@@ -1,0 +1,246 @@
+/* ======== Supplier list ======== */
+/* #region list */
+#supplier_list {
+	position: fixed;
+	top: 100px;
+	left: 100px;
+	right: 100px;
+	bottom: 100px;
+	margin: auto;
+
+	overflow: scroll;
+
+	background-color: #5ac4e1;
+	border: solid #5c7678 4px;
+	border-radius: 10px;
+	filter: drop-shadow(0px 0px 4px #50eaed);
+
+	z-index: 50;
+
+	animation-timing-function: ease;
+	animation-duration: 300ms;
+	animation-iteration-count: 1;
+
+	will-change: opacity, scale;
+}
+
+#supplier_list h2 {
+	text-align: center;
+	padding-top: 3px;
+
+	font-size: 24px;
+
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: rgb(215, 236, 238);
+	text-decoration-thickness: 4px;
+	text-underline-offset: 6px;
+}
+
+#supplier_list p {
+	padding-left: 100px;
+}
+
+/* == Animations == */
+@media (prefers-reduced-motion: no-preference) {
+	.list_open {
+		animation-name: open_pop_up;
+	}
+	@keyframes open_pop_up {
+		from {
+			opacity: 0;
+			scale: 0;
+		}
+		to {
+			opacity: 1;
+			scale: 1;
+		}
+	}
+	
+	.list_closed {
+		animation-name: close_pop_up;
+	}
+	@keyframes close_pop_up {
+		from {
+			opacity: 1;
+			scale: 1;
+		}
+		to {
+			opacity: 0;
+			scale: 0;
+		}
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	#supplier_list {
+		animation-timing-function: none;
+	}
+
+	.list_open {
+		animation-name: open_pop_up_reduced;
+	}
+	@keyframes open_pop_up_reduced {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	
+	.list_closed {
+		animation-name: close_pop_up_reduced;
+	}
+	@keyframes close_pop_up_reduced {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+}
+
+/* == Close Button == */
+#close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 50px;
+	width: 50px;
+	border-radius: 10px;
+	background-color: #50eaed;
+	border: solid #5c7678 2px;
+	cursor: pointer;
+}
+
+.close_line {
+	border: none;
+	background-color: #5c7678;
+	height: 4px;
+	border-radius: 10px;
+}
+/* #endregion */
+
+
+/* ======== Overlay ======== */
+/* #region overlay */
+#overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #dae6e78d;
+	backdrop-filter: blur(5px);
+	z-index: 40;
+	cursor: pointer;
+}
+
+/* == Animations == */
+.overlay_open {
+	animation-name: fade_in_overlay;
+	animation-duration: 300ms;
+	animation-iteration-count: 1;
+}
+@keyframes fade_in_overlay {
+	from {
+		background-color: #dae6e700;
+		backdrop-filter: blur(0px);
+	}
+	to {
+		background-color: #dae6e78d;
+		backdrop-filter: blur(5px);
+	}
+}
+
+.overlay_closed {
+	animation-name: fade_out_overlay;
+	animation-duration: 300ms;
+	animation-iteration-count: 1;
+}
+@keyframes fade_out_overlay {
+	from {
+		background-color: #dae6e78d;
+		backdrop-filter: blur(5px);
+	}
+	to {
+		background-color: #dae6e700;
+		backdrop-filter: blur(0px);
+	}
+}
+
+@media screen and (prefers-reduced-transparency: reduce) {
+	#overlay {
+		background-color: #dae6e7;
+	}
+
+	.overlay_open {
+		animation-name: fade_in_overlay_reduced;
+		animation-duration: 300ms;
+		animation-iteration-count: 1;
+	}
+	@keyframes fade_in_overlay_reduced {
+		from {
+			background-color: #dae6e700;
+			backdrop-filter: blur(0px);
+		}
+		to {
+			background-color: #dae6e7;
+			backdrop-filter: blur(5px);
+		}
+	}
+
+	.overlay_closed {
+		animation-name: fade_out_overlay_reduced;
+		animation-duration: 300ms;
+		animation-iteration-count: 1;
+	}
+	@keyframes fade_out_overlay_reduced {
+		from {
+			background-color: #dae6e7;
+			backdrop-filter: blur(5px);
+		}
+		to {
+			background-color: #dae6e700;
+			backdrop-filter: blur(0px);
+		}
+	}
+}
+/* #endregion */
+
+
+/* ======== Link ======== */
+#open_link {
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+
+
+/* ===== Suppliers Mobile ===== */
+@media only screen and (max-width: 750px) {
+	#supplier_list {
+		top: 40px;
+		left: 40px;
+		right: 40px;
+		bottom: 40px;
+	}
+
+	#supplier_list h2 {
+		padding-top: 30px;
+	}
+	
+	#supplier_list p {
+		padding-left: 30px;
+	}
+
+	/* == Close Button == */
+	#close {
+		height: 40px;
+		width: 40px;
+	}
+	.close_line {
+		height: 3px;
+	}
+}

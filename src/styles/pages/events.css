@@ -1,0 +1,34 @@
+.event_section {
+	text-align: center;
+	margin: auto;
+	border-radius: 10px;
+	padding: 25px 0px 25px 0px;
+}
+
+.event_section h2 {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: hsl(329, 50%, 58%);
+	text-decoration-thickness: 3px;
+	text-underline-offset: 6px;
+}
+
+/* ===== Event Mobile ===== */
+@media only screen and (max-width: 750px) {
+	.event_section {
+		padding: 25px 10px 25px 10px;
+	}
+
+	#music {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#music_booking, #music_calendar {	
+		padding: 0px;
+	}
+
+	#music_booking {
+		border-right: none
+	}
+}

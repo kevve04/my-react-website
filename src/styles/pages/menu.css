@@ -1,0 +1,136 @@
+#menu_title {
+	text-align: center;
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: hsl(165, 38%, 56%);
+	text-decoration-thickness: 5px;
+	text-underline-offset: 10px;
+	padding-left: 210px;
+}
+
+#menu_sidebar {
+    position: fixed;
+    width: 200px;
+    height: 150%;
+    background-color: hsl(154, 16%, 92%);
+	border-right: solid 3px hsl(165, 38%, 56%);
+    padding: 20px;
+	padding-top: 200px;
+	margin-top: -300px;
+	margin-left: -50px;
+}
+
+#menu_sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu_sidebar li {
+    margin-bottom: 12px;
+}
+
+#menu_sidebar a {
+    text-decoration: none;
+    color: #303636;
+}
+
+#menu_sidebar a:hover {
+	font-weight: bold;
+    color: #0e909c;
+}
+
+#menu {
+	margin-left: 210px;
+	margin-top: 30px;
+}
+
+.food_category {
+	margin-bottom: 50px;
+}
+
+.category_title {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: hsla(177, 49%, 63%, 0.6);
+	text-decoration-thickness: 3px;
+	text-underline-offset: 6px;
+}
+
+#weeks_lunch li {
+	list-style-type: none;
+}
+
+.food_name {
+	width: 0px;
+	padding: 0px;
+}
+
+.food_info {
+	font-weight: normal;
+	margin-top: 5px;
+	padding: 0px;
+}
+
+.food_item td {
+	font-weight: bold;
+	text-align: right;
+	width: 100px;
+}
+
+.food_item th {
+	text-align: left;
+}
+
+.food_option {
+	font-weight: normal;
+	width: 800px;
+	padding-left: 30px;
+}
+
+/* ===== Meny Mobile ===== */
+@media only screen and (max-width: 750px) {
+	#menu_main {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	#menu_title {
+		padding-left: 0px;
+		text-underline-offset: 8px;
+		width: 100%;
+		font-size: 30px;
+	}
+	
+	#menu_sidebar {
+		box-sizing: border-box;
+		width: 100%;
+		position: static;
+		height: fit-content;
+		text-align: center;
+		padding: 10px 50px 10px 50px;
+		margin: 0px;
+		border-right: none;
+		border-top: solid 4px hsl(165, 38%, 56%);
+		border-bottom: solid 4px hsl(165, 38%, 56%);
+	}
+
+	#menu_sidebar li {
+		margin-bottom: 20px;
+	}
+	
+	#menu_sidebar a:hover {
+		font-weight: normal;
+		color: #303636;
+	}
+
+	#menu {
+		margin-left: 0px;
+		margin-top: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.food_name {
+		width: 80%;
+	}
+}

@@ -1,0 +1,76 @@
+#contact_main {
+	text-align: center;
+}
+
+#contact_main h1 {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: hsl(208, 69%, 72%);
+	text-decoration-thickness: 5px;
+	text-underline-offset: 6px;
+}
+
+#contact_form {
+	background-color: hsl(208, 69%, 72%);
+	margin: 10px 200px 10px 200px;
+	padding: 30px;
+	border-radius: 50px;
+	border: solid hsl(173, 18%, 80%) 4px;
+	filter: drop-shadow(0px 0px 4px hsl(173, 88%, 27%));
+}
+
+.form_button {
+	width: 90px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 14px;
+	background-color: hsl(208, 100%, 97%);
+	border: none;
+	color: hsl(173, 48%, 17%);
+}
+
+.form_button:hover {
+	background-color: hsl(208, 37%, 86%);
+	cursor: pointer;
+}
+
+.form_button:active {
+	background-color: hsl(208, 50%, 90%);
+}
+
+.form_text {
+	margin-left: 0px;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.form_input {
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+#message_input {
+	width: 400px;
+	height: auto;
+	max-height: 200px;
+	max-width: 700px;
+	min-width: 200px;
+	min-height: 50px;
+	overflow-y: auto;
+}
+
+/* ===== Contact Mobile ===== */
+@media only screen and (max-width: 750px) {
+	#contact_main h1 {
+		text-decoration-thickness: 6px;
+		text-underline-offset: 6px;
+	}
+
+	#contact_form {
+		margin: 10px;
+	}
+	
+	#message_input {
+		width: 150px;
+	}
+}

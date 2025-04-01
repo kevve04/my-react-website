@@ -1,0 +1,53 @@
+html {
+	background-color: rgb(38, 40, 45);
+	overflow-x: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	
+	font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+main {
+	min-height: 60vh;
+	margin: -10px;
+	padding: 50px;
+	background-color: hsl(49, 100%, 98%);
+	z-index: 0;
+}
+
+/* ====== Other Global Styles ====== */
+a, a:visited {
+	color: hsl(319, 82%, 51%);
+}
+a:focus {
+	outline: solid 2px rgb(0, 145, 255);
+}
+h2 {
+	font-weight: 700;
+	color: black;
+}
+h3 {
+	color: hsl(0, 0%, 10%);
+	margin-left: 10px;
+	font-size: 16px;
+}
+p {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+/* ===== Global Mobile ===== */
+@media only screen and (max-width: 750px) {
+	main {
+		padding: 20px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		overscroll-behavior-x: none;
+	}
+	h2 {
+		text-align: center;
+	}
+}

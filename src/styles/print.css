@@ -1,0 +1,49 @@
+/* NOTE: Currently only changes the page 'Menu' and the header and footer */
+@media only print {
+	/* === Global === */
+	main {
+		background-color: white;
+	}
+	header {
+		padding-bottom: 0px;
+		background: hsl(177, 86%, 80%);
+		filter: none;
+		border: solid 5px hsl(329, 76%, 58%);
+	}
+	.nav_button {
+		display: none;
+	}
+	footer {
+		display: none;
+	}
+
+	/* === Menu === */
+	#menu_sidebar {
+		display: none;
+	}
+	#menu_title {
+		padding-left: 0px;
+		margin-top: 0px;
+		font-size: 20px;
+	}
+	#menu {
+		margin-left: 0px;
+		margin-top: 30px;
+	}
+	.food_category {
+		break-inside: avoid-page;
+	}
+	.category_title {
+		text-align: center;
+		font-size: 15px;
+	}
+	.food_name {
+		font-size: 10px;
+		width: 80%;
+	}
+	.food_info, .food_item td, .food_item th, .food_option, .food_category h4, .food_category h3, .food_category ul p {
+		font-size: 10px;
+		font-family:'Times New Roman', Times, serif;
+	}
+
+}

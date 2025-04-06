@@ -210,14 +210,6 @@
 /* #endregion */
 
 
-/* ======== Link ======== */
-#open_link {
-	font-size: 14px;
-	margin-left: 20px;
-}
-
-
-
 /* ===== Suppliers Mobile ===== */
 @media only screen and (max-width: 750px) {
 	#supplier_list {
@@ -237,10 +229,6 @@
 
 	/* == Close Button == */
 	#close {
-		height: 40px;
-		width: 40px;
-	}
-	.close_line {
-		height: 3px;
+		scale: 0.8;
 	}
 }

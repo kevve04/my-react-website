@@ -119,7 +119,9 @@ function About() {
 					Därför samarbetar vi enbart med utvalda, seriosa leverantörer som vi känner och har fullt förtroende 
 					för och som i alla avseenden lever upp till våra högt ställda kvalitetskrav.
 				</p>
-				<Suppliers/>
+				<p>
+					<Suppliers/>
+				</p>
 				<p>
 					God mat för alla! Vi har en lång tradition av matglädje och i över 60 år har vi lagad god fast-food mat.
 				</p>

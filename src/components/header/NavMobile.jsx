@@ -50,7 +50,7 @@ function NavMobile({activeIndex, setActiveIndex}) {
 					onClickFunction={openHamburger} 
 				/>
 
-				{/* Open Button */}
+				{/* Close Button */}
 				<HamburgerButton 
 					forOpening={false} 
 					isShowing={!isOpening}
